@@ -163,6 +163,7 @@ class CustomPaginationActionsTable extends React.Component {
 
   handleChangePage = (event, page) => {
     this.setState({ page })
+    this.props.history.replace('/profile/tasks/' + page)
   };
 
   handleChangeRowsPerPage = event => {
@@ -171,6 +172,12 @@ class CustomPaginationActionsTable extends React.Component {
 
   handleClickListItem = id => {
     this.props.history.push('/task/' + id)
+  }
+  
+  componentDidMount() {
+		const path = window.location.pathname.split("/"); 
+		const index = path.indexOf("tasks") + 1;
+		this.setState({ page: parseInt(path[index]) }); 
   }
 
   render () {
