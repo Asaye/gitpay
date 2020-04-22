@@ -137,7 +137,7 @@ class Profile extends Component {
 
   setActive (path) {
     switch (path) {
-      case '/profile/tasks':
+      case '/profile/tasks/0':
         this.setState({ selected: 0 })
         break
       case '/profile/payment-options':
@@ -330,7 +330,7 @@ class Profile extends Component {
                   <Paper className={ classes.menuContainer }>
                     <MenuList>
                       <MenuItem
-                        onClick={ () => this.props.history.push('/profile/tasks') }
+                        onClick={ () => this.props.history.push('/profile/tasks/0') }
                         className={ classes.menuItem }
                         selected={ this.state.selected === 0 }
                       >
