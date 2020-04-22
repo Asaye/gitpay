@@ -330,7 +330,7 @@ class Profile extends Component {
                   <Paper className={ classes.menuContainer }>
                     <MenuList>
                       <MenuItem
-                        onClick={ () => this.props.history.push('/profile/tasks') }
+                        onClick={ () => this.props.history.push('/profile/tasks/0') }
                         className={ classes.menuItem }
                         selected={ this.state.selected === 0 }
                       >
